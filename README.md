@@ -57,4 +57,4 @@ El código Ladder se implementó con éxito en la simulación y en hardware real
 ## Referencias 
 [1] OpenAI, "ChatGPT," [Modelo de lenguaje de gran tamaño]. [En línea]. Disponible: https://chat.openai.com/chat. [Accedido: 1-abr-2025].  
 
-[2] Scantime Automation & Training, “An Introduction to HMI/Visualization Programming with CODESYS!,” YouTube, 7 de octubre de 2021, [Video en línea]. Disponible en: https://www.youtube.com/watch?v=eXs28TuCrBg.[Accedido: 28-mar-2025].
+[2] Scantime Automation & Training, “An Introduction to HMI/Visualization Programming with CODESYS!,” YouTube, 7 de octubre de 2021, [Video en línea]. Disponible en: https://www.youtube.com/watch?v=eXs28TuCrBg. [Accedido: 28-mar-2025].
