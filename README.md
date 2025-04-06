@@ -42,7 +42,7 @@ El funcionamiento es el siguiente:
 ![image](https://github.com/user-attachments/assets/d63da023-5f69-4ee4-8f70-2d2ad5faebbe)
 
 
-## Implementación en OpenPLC *(Por completar)*
+## Implementación en OpenPLC 
 La lógica diseñada originalmente en CODESYS fue replicada en OpenPLC, manteniendo la esencia del control Ladder. Debido a limitaciones físicas, se omitieron los botones START y STOP. Las entradas (B1, B2, B3) se asignaron respectivamente a %IX0.0, %IX0.1 y %IX0.2, mientras que las salidas (LEDs H1 a H5) se asignaron de %QX0.0 a %QX0.4.
 Se generaron tablas de comportamiento y mapas de Karnaugh para optimizar las funciones booleanas correspondientes a cada salida, facilitando una implementación eficiente y precisa.
 
