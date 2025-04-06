@@ -10,6 +10,9 @@ Este proyecto es una simulación de un sistema de monitoreo de niveles de líqui
 - Probar la integración con **OpenPLC** con un circuito fisico.
 
 ## Diseño del Circuito y Lógica de Control
+### Tablas de Comportamiento y Mapas de Karnaugh
+Para realizar el diseño lógico del sistema, inicialmente se crearon tablas de comportamiento que identifican claramente los estados esperados en cada salida (LED) según todas las combinaciones posibles de entradas (sensores). Posteriormente, para simplificar y optimizar las funciones booleanas asociadas a cada salida, se utilizaron mapas de Karnaugh. Esta técnica permitió minimizar el número de elementos lógicos necesarios, facilitando una implementación eficiente tanto en la simulación en CODESYS como en la implementación práctica en OpenPLC.
+
 ### Diagramas Ladder (LD)
 El programa de control sigue esta lógica:
 1. **LED de nivel bajo encendido**: Indica que el tanque está vacío o por debajo del umbral mínimo.
@@ -40,12 +43,17 @@ El funcionamiento es el siguiente:
 
 
 ## Implementación en OpenPLC *(Por completar)*
+La lógica diseñada originalmente en CODESYS fue replicada en OpenPLC, manteniendo la esencia del control Ladder. Debido a limitaciones físicas, se omitieron los botones START y STOP. Las entradas (B1, B2, B3) se asignaron respectivamente a %IX0.0, %IX0.1 y %IX0.2, mientras que las salidas (LEDs H1 a H5) se asignaron de %QX0.0 a %QX0.4.
+Se generaron tablas de comportamiento y mapas de Karnaugh para optimizar las funciones booleanas correspondientes a cada salida, facilitando una implementación eficiente y precisa.
 
-> ⚠ **Nota**: Completar detalles de OpenPLC y foto de la programación.
+![image](https://github.com/user-attachments/assets/1bab8ddc-8028-4718-95fb-caf66454bba9)
 
 
 ## Implementación Fisica 
-> ⚠ **Nota**: Foto y explicación del circuito fisico.
+Se utilizó un microcontrolador ESP32 conectado a un protoboard, empleando LEDs como indicadores visuales y botones táctiles (NC) para simular sensores con lógica negativa. Las entradas fueron conectadas a los puertos GPIO 36, 39 y 34; y las salidas digitales (LEDs indicadores) a los puertos GPIO 32, 33, 25, 26 y 27. La configuración del circuito fue realizada cuidadosamente para facilitar el montaje y asegurar un funcionamiento claro y eficiente.
+
+![WhatsApp Image 2025-04-05 at 20 36 04](https://github.com/user-attachments/assets/f6ff82a7-67b4-44d4-b349-226eada398fe)
+
 
 ## Pruebas y Resultados
 Se realizaron pruebas en el entorno de simulación, confirmando el correcto funcionamiento del sistema. Los LEDs respondieron de manera adecuada según la lógica implementada.
